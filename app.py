@@ -146,5 +146,12 @@ with tab3:
         all_recos = []
         for f in st.session_state.selected_movies:
             all_recos += recommend_hybrid(f, top_n=5, alpha=alpha_manual)
+        
+        # 🔍 Supprime les films déjà sélectionnés
+        unique_recos = sorted(set(all_recos) - set(st.session_state.selected_movies))
+
         st.markdown("### 🔽 Recommendations:")
-        st.write(sorted(set(all_recos)))
+        if unique_recos:
+            st.write(unique_recos)
+        else:
+            st.info("No new recommendations found (all were already selected).")
