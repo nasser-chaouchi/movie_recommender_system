@@ -10,8 +10,19 @@ from collections import Counter
 @st.cache_data
 def load_data():
     try:
-        df_movies = pd.read_csv("https://huggingface.co/datasets/nasserCha/movielens_ratings_32m/resolve/main/movies.csv")
-        df_ratings = pd.read_csv("https://huggingface.co/datasets/nasserCha/movielens_ratings_32m/resolve/main/ratings.csv")
+        df_movies = pd.read_csv(
+            "https://huggingface.co/datasets/nasserCha/movielens_ratings_10m/resolve/main/movies.dat",
+            sep="::",
+            engine="python",
+            names=["movieId", "title", "genres"]
+        )
+
+        df_ratings = pd.read_csv(
+            "https://huggingface.co/datasets/nasserCha/movielens_ratings_10m/resolve/main/ratings.dat",
+            sep="::",
+            engine="python",
+            names=["userId", "movieId", "rating", "timestamp"]
+        )
         return df_movies, df_ratings
     except Exception as e:
         st.error("❌ Failed to load datasets from Hugging Face.")
