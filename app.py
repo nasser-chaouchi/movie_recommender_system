@@ -14,20 +14,25 @@ def load_data():
             "https://huggingface.co/datasets/nasserCha/movielens_rating_1m/resolve/main/movies.dat",
             sep="::",
             engine="python",
-            names=["movieId", "title", "genres"]
+            names=["movieId", "title", "genres"],
+            encoding="latin-1"
         )
 
         df_ratings = pd.read_csv(
             "https://huggingface.co/datasets/nasserCha/movielens_rating_1m/resolve/main/ratings.dat",
             sep="::",
             engine="python",
-            names=["userId", "movieId", "rating", "timestamp"]
+            names=["userId", "movieId", "rating", "timestamp"],
+            encoding="latin-1"
         )
+
         return df_movies, df_ratings
+
     except Exception as e:
         st.error("❌ Failed to load datasets from Hugging Face.")
         st.exception(e)
         return pd.DataFrame(), pd.DataFrame()
+
 
 
 df_movies, df_ratings = load_data()
