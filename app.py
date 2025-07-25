@@ -9,10 +9,14 @@ from collections import Counter
 # --- Load data ---
 @st.cache_data
 def load_data():
-    df_movies = pd.read_csv("https://huggingface.co/datasets/nasserCha/movielens_ratings_32m/resolve/main/movies.csv")
-    df_ratings = pd.read_csv("https://huggingface.co/datasets/nasserCha/movielens_ratings_32m/resolve/main/ratings.csv")
-
-    return df_movies, df_ratings
+    try:
+        df_movies = pd.read_csv("https://huggingface.co/datasets/nasserCha/movielens_ratings_32m/resolve/main/movies.csv")
+        df_ratings = pd.read_csv("https://huggingface.co/datasets/nasserCha/movielens_ratings_32m/resolve/main/ratings.csv")
+        return df_movies, df_ratings
+    except Exception as e:
+        st.error("❌ Failed to load datasets from Hugging Face.")
+        st.exception(e)
+        return pd.DataFrame(), pd.DataFrame()  # empty fallback
 
 df_movies, df_ratings = load_data()
 
