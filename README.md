@@ -35,7 +35,7 @@ This project is an interactive movie recommendation system built with **Streamli
 
 ## Try the App
 
-👉 Try the 1M MovieLens app: [Link to deployed Streamlit app](https://movielensreco-uwtaqzzda5mvnxh3buwshd.streamlit.app/)
+Try the 1M MovieLens app: [Link to deployed Streamlit app](https://movielensreco-uwtaqzzda5mvnxh3buwshd.streamlit.app/)
 
 ---
 
@@ -92,6 +92,26 @@ The datasets are loaded directly from Hugging Face:
 
 ---
 
+## Business Impact
+
+Personalized recommendations are at the heart of modern digital platforms.  
+This project showcases how machine learning can enhance:
+
+- **User engagement** by tailoring movie suggestions  
+- **Retention** through improved discovery and reduced churn  
+- **Scalability** from small datasets (1M ratings) to large-scale systems (32M ratings)  
+
+Such recommender systems form the backbone of platforms like Netflix, Amazon Prime, and Spotify, highlighting the critical role of **AI-driven personalization** in the entertainment industry.
+
+---
+
+## Disclaimer
+
+**Important Notice**  
+This project is developed **for educational and research purposes only**.  
+It is not a production-grade system and should not be used as-is for commercial deployment.  
+
+
 ## Built With
 
 - Python
@@ -105,14 +125,11 @@ The datasets are loaded directly from Hugging Face:
 ## Author
 
 **Nasser Chaouchi**  
-💼 Data Scientist & ML Engineer  
-🌐 [LinkedIn](https://www.linkedin.com/in/nasser-chaouchi)
+Data Scientist & ML Engineer  
+[LinkedIn](https://www.linkedin.com/in/nasser-chaouchi)
 
 ---
 
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
-
-
-
