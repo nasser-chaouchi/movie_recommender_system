@@ -34,9 +34,7 @@ html, body, [class*="css"]{
 """
 st.markdown(CSS, unsafe_allow_html=True)
 
-# -----------------------------
-# Data loading (kept as-is)
-# -----------------------------
+
 @st.cache_data
 def load_data():
     try:

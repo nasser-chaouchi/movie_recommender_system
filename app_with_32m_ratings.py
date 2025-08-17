@@ -7,9 +7,7 @@ from scipy.sparse import csr_matrix
 from collections import Counter, defaultdict
 import re
 
-# -----------------------------
-# Page config & corporate CSS
-# -----------------------------
+
 st.set_page_config(page_title="MovieLens Hybrid Recommender", layout="wide")
 
 CSS = """
