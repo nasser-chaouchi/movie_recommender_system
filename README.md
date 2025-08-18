@@ -35,7 +35,10 @@ This project is an interactive movie recommendation system built with **Streamli
 
 ## Try the App
 
+![Streamlit Interface](images/Interface_Screenshot.png)
+
 Try the 1M MovieLens app: [Link to deployed Streamlit app](hhttps://movierecommendersystem-qqxh2wfxieni9cftjchdxq.streamlit.app//)
+
 
 ---
 
